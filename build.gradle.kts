@@ -18,7 +18,7 @@ dependencies {
 configure<SonarExtension> {
     properties {
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.projectKey", "de.havox_design.aoc:advent_of_code")
+        property("sonar.projectKey", "de.havox_design.aoc:advent_of_code2025")
         property("sonar.organization", "havox")
         property("sonar.sourceEncoding", "UTF-8")
     }
