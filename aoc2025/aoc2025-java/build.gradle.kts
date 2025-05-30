@@ -1,5 +1,5 @@
 dependencies {
-    api(project(":utils"))
+    api(project(":aoc-utils"))
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
