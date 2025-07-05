@@ -1,7 +1,7 @@
 [versions]
 hamcrest = "3.0"
 junit5 = "5.13.1"
-kotlin-jvm = "2.1.21"
+kotlin-jvm = "2.2.0"
 sonarqube-plugin = "6.2.0.5505"
 
 [libraries]
