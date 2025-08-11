@@ -38,7 +38,7 @@ tasks.named("check") {
 // Switch to gradle "all" distribution.
 tasks.withType<Wrapper> {
     distributionType = Wrapper.DistributionType.ALL
-    gradleVersion = "8.14.3"
+    gradleVersion = "9.0.0"
 }
 
 develocity {
