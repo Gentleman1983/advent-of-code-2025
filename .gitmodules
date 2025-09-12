@@ -5,4 +5,4 @@
 [submodule "advent-of-code"]
 	path = advent-of-code
 	url = git@github.com:Gentleman1983/advent-of-code.git
-    branch = 2025.0.5
+    branch = 2025.0.6
