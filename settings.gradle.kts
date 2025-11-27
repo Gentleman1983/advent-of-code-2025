@@ -11,7 +11,7 @@ dependencyResolutionManagement {
 }
 
 include("aoc2025")
-include("aoc2025:aoc2025-java")
+include("aoc2025:aoc2025-kotlin")
 
 include("advent-of-code-utils")
 apply( "advent-of-code-utils/settings.gradle.kts")
