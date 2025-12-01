@@ -7,7 +7,7 @@ enum class Direction(key: Char, val direction: Int) {
 
     companion object {
         fun parse(string: String): Direction =
-            when(string.uppercase()[0]) {
+            when (string.uppercase()[0]) {
                 'L' -> L
                 'R' -> R
                 else -> UNKNOWN
