@@ -7,15 +7,32 @@ class SecretEntrance(private var filename: String) {
     fun processPart1(start: Int = 50): Any =
         data
             .runningFold(start) { currentValue, move ->
-            move
-                .process(currentValue)
-        }
+                move
+                    .process(currentValue)
+                    .first
+            }
             .count {
                 it == 0
             }
 
-    fun processPart2(): Any =
-        0L
+    fun processPart2(start: Int = 50): Any =
+        data
+            .fold(start to 0) { (currentValue, oldZeros), move ->
+                require(move.distance != 0) {
+                    "Not moving anywhere"
+                }
+
+                val newValue = ((move.process(currentValue).first % 100) + 100) % 100
+                val hitsZero = (
+                        currentValue != 0 &&
+                                (newValue == 0 ||
+                                        move.direction == Direction.L && newValue > currentValue ||
+                                        move.direction == Direction.R && newValue < currentValue)
+                        )
+
+                newValue to oldZeros + move.distance / 100 + if (hitsZero) 1 else 0
+            }
+            .second
 
     private fun getResourceAsText(path: String): List<String> =
         this

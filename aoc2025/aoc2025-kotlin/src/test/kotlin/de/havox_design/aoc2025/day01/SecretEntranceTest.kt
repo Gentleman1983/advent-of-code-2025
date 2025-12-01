@@ -15,20 +15,20 @@ class SecretEntranceTest {
 
     @ParameterizedTest
     @MethodSource("getDataForTestProcessPart2")
-    fun testProcessPart2(filename: String, expectedResult: Long) =
+    fun testProcessPart2(filename: String, expectedResult: Int) =
         SecretEntrance(filename).processPart2().shouldBe(expectedResult)
 
     companion object {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day01/day01part1sample.txt", 3)
+                Arguments.of("de/havox_design/aoc2025/day01/day01sample.txt", 3)
             )
 
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day01/day01part2sample.txt", 0L)
+                Arguments.of("de/havox_design/aoc2025/day01/day01sample.txt", 6)
             )
     }
 }
