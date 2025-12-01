@@ -1,6 +1,6 @@
 package de.havox_design.aoc2025.day01
 
-class Day01(private var filename: String) {
+class SecretEntrance(private var filename: String) {
     private val data = getResourceAsText(filename)
 
     fun processPart1(): Any =
