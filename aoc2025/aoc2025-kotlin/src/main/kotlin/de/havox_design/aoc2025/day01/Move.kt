@@ -14,7 +14,7 @@ data class Move(val direction: Direction, val distance: Int) {
         direction.direction * distance
 
     private fun calculateDistance(start: Int): Int {
-        val change = calculateChange()1
+        val change = calculateChange()
         val target = start + change
 
         return if (target < 0) {
