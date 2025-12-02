@@ -16,7 +16,7 @@ All projects are built using build management system
 ![SonarQube](https://sonarcloud.io/api/project_badges/measure?project=de.havox_design.aoc%3Aadvent_of_code2025&metric=code_smells "The current number of SonarQube code smells")](https://sonarcloud.io/dashboard?id=de.havox_design.aoc:advent_of_code2025)
 
 To run all solutions, simply run `./gradlew run`. If you want to run the solution for day 5, simply run
-`./gradlew aoc2023:run day05`.
+`./gradlew aoc2025:run day05`.
 
 ## Current status:
 
