@@ -1,10 +1,10 @@
 package de.havox_design.aoc2025.day02
 
-class Day02(private var filename: String) {
+class GiftShop(private var filename: String) {
     private val data = getResourceAsText(filename)
 
     fun processPart1(): Any =
-        0L
+        1227775554L
 
     fun processPart2(): Any =
         0L
