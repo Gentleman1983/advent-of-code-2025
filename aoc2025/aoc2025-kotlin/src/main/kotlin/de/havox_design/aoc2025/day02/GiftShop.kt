@@ -10,9 +10,9 @@ class GiftShop(private var filename: String) {
             .sum()
 
     fun processPart2(): Any =
-        4174379265L
-
-
+        data
+            .filterInvalidIds(Long::isSequenceRepeatedAtLeastTwice)
+            .sum()
 
     private fun getResourceAsText(path: String): List<String> =
         this
@@ -36,6 +36,28 @@ private fun Long.isSequenceRepeatedTwice(): Boolean {
     return first == second
 }
 
+private fun Long.isSequenceRepeatedAtLeastTwice(): Boolean {
+    val id = "$this"
+
+    for (size in 1..id.length / 2) {
+        if (id.length % size != 0) {
+            continue
+        }
+
+        val subsequences = buildList {
+            id
+                .windowed(size, size) {
+                    add(it)
+                }
+        }
+        if (subsequences.all { it == subsequences.first() }) {
+            return true
+        }
+    }
+
+    return false
+}
+
 private fun List<LongRange>.filterInvalidIds(isInvalid: (Long) -> Boolean): List<Long> =
     flatMap { range ->
         range
@@ -44,10 +66,10 @@ private fun List<LongRange>.filterInvalidIds(isInvalid: (Long) -> Boolean): List
 
 private fun List<String>.parseIdRanges(): List<LongRange> =
     first()
-    .split(",")
-    .map { range ->
-        val (from, to) = range
-            .split("-")
-            .map(String::toLong)
-        from..to
-    }
+        .split(",")
+        .map { range ->
+            val (from, to) = range
+                .split("-")
+                .map(String::toLong)
+            from..to
+        }
