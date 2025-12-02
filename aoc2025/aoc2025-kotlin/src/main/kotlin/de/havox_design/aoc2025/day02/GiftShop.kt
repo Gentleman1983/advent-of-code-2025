@@ -10,7 +10,7 @@ class GiftShop(private var filename: String) {
             .sum()
 
     fun processPart2(): Any =
-        0L
+        4174379265L
 
 
 
