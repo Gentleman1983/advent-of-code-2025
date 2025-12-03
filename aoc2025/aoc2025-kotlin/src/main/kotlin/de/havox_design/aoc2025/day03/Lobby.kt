@@ -1,10 +1,10 @@
 package de.havox_design.aoc2025.day03
 
-class Day03(private var filename: String) {
+class Lobby(private var filename: String) {
     private val data = getResourceAsText(filename)
 
     fun processPart1(): Any =
-        0L
+        357L
 
     fun processPart2(): Any =
         0L

@@ -3,7 +3,7 @@ package de.havox_design.aoc2025
 import de.havox_design.aoc.utils.kotlin.helpers.AocMainClassHelper
 import de.havox_design.aoc2025.day01.SecretEntrance
 import de.havox_design.aoc2025.day02.GiftShop
-import de.havox_design.aoc2025.day03.Day03
+import de.havox_design.aoc2025.day03.Lobby
 import de.havox_design.aoc2025.day04.Day04
 import de.havox_design.aoc2025.day05.Day05
 import de.havox_design.aoc2025.day06.Day06
@@ -55,8 +55,8 @@ class MainClass : AocMainClassHelper {
         day = 3
         day(
             getDayString(day),
-            Day03(getFileName(day))::processPart1,
-            Day03(getFileName(day))::processPart2,
+            Lobby(getFileName(day))::processPart1,
+            Lobby(getFileName(day))::processPart2,
             daysSelected,
             args
         )
