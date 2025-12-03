@@ -22,13 +22,13 @@ class LobbyTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day03/day03part1sample.txt", 357L)
+                Arguments.of("de/havox_design/aoc2025/day03/day03sample.txt", 357L)
             )
 
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day03/day03part2sample.txt", 0L)
+                Arguments.of("de/havox_design/aoc2025/day03/day03sample.txt", 3121910778619L)
             )
     }
 }

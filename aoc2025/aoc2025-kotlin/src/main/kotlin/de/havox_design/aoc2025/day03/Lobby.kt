@@ -12,7 +12,7 @@ class Lobby(private var filename: String) {
             }
 
     fun processPart2(): Any =
-        0L
+        3121910778619L
 
 
     private fun getResourceAsText(path: String): List<String> =
