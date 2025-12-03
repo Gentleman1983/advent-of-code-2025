@@ -12,7 +12,11 @@ class Lobby(private var filename: String) {
             }
 
     fun processPart2(): Any =
-        3121910778619L
+        data
+            .sumOf { row ->
+                row
+                    .calculateJoltage(12)
+            }
 
 
     private fun getResourceAsText(path: String): List<String> =
