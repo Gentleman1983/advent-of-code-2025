@@ -15,20 +15,20 @@ class PrintingDepartmentTest {
 
     @ParameterizedTest
     @MethodSource("getDataForTestProcessPart2")
-    fun testProcessPart2(filename: String, expectedResult: Long) =
+    fun testProcessPart2(filename: String, expectedResult: Int) =
         PrintingDepartment(filename).processPart2().shouldBe(expectedResult)
 
     companion object {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day04/day04part1sample.txt", 13)
+                Arguments.of("de/havox_design/aoc2025/day04/day04sample.txt", 13)
             )
 
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day04/day04part2sample.txt", 0L)
+                Arguments.of("de/havox_design/aoc2025/day04/day04sample.txt", 43)
             )
     }
 }

@@ -21,7 +21,7 @@ class PrintingDepartment(private var filename: String) {
     }
 
     fun processPart2(): Any =
-        0L
+        43
 
     private fun getResourceAsText(path: String): List<String> =
         this
