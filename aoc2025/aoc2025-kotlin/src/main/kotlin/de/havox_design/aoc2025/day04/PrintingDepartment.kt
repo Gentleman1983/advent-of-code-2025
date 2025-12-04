@@ -20,8 +20,27 @@ class PrintingDepartment(private var filename: String) {
         return accessibleCellCount
     }
 
-    fun processPart2(): Any =
-        43
+    fun processPart2(): Any {
+        var removedCellCount = 0
+
+        do {
+            var anyRemovals = false
+
+            data
+                .forEachIndexed { y, row ->
+                    row
+                        .forEachIndexed { x, cell ->
+                            if (cell && data.isCellAccessible(x, y)) {
+                                data[y][x] = false
+                                anyRemovals = true
+                                removedCellCount++
+                            }
+                        }
+                }
+        } while (anyRemovals)
+
+        return removedCellCount
+    }
 
     private fun getResourceAsText(path: String): List<String> =
         this
