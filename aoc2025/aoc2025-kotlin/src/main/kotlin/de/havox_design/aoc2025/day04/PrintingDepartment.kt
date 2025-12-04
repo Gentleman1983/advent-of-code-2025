@@ -2,13 +2,70 @@ package de.havox_design.aoc2025.day04
 
 class PrintingDepartment(private var filename: String) {
     private val data = getResourceAsText(filename)
+        .toGrid()
 
-    fun processPart1(): Any =
-        13L
+    fun processPart1(): Any {
+        var accessibleCellCount = 0
+
+        data
+            .forEachIndexed { y, row ->
+                row
+                    .forEachIndexed { x, cell ->
+                        if (cell && data.isCellAccessible(x, y)) {
+                            accessibleCellCount++
+                        }
+                    }
+            }
+
+        return accessibleCellCount
+    }
 
     fun processPart2(): Any =
         0L
 
     private fun getResourceAsText(path: String): List<String> =
-        this.javaClass.classLoader.getResourceAsStream(path)!!.bufferedReader().readLines()
+        this
+            .javaClass
+            .classLoader
+            .getResourceAsStream(path)!!
+            .bufferedReader()
+            .readLines()
+}
+
+private typealias Grid = List<MutableList<Boolean>>
+typealias InputStrings = List<String>
+
+private fun InputStrings.toGrid(): Grid =
+    this
+        .filterNotEmpty()
+        .map { row ->
+            row.mapTo(mutableListOf()) {
+                it == '@'
+            }
+        }
+
+fun InputStrings.filterNotEmpty(): InputStrings =
+    filter(String::isNotEmpty)
+
+private fun Grid.isCellAccessible(x: Int, y: Int): Boolean {
+    var occupiedCellsAround = 0
+
+    if (getOrNull(y)?.getOrNull(x - 1) == true)
+        occupiedCellsAround++
+    if (getOrNull(y)?.getOrNull(x + 1) == true)
+        occupiedCellsAround++
+    if (getOrNull(y - 1)?.get(x) == true)
+        occupiedCellsAround++
+    if (getOrNull(y + 1)?.get(x) == true)
+        occupiedCellsAround++
+    if (getOrNull(y - 1)?.getOrNull(x - 1) == true)
+        occupiedCellsAround++
+    if (getOrNull(y - 1)?.getOrNull(x + 1) == true)
+        occupiedCellsAround++
+    if (getOrNull(y + 1)?.getOrNull(x - 1) == true)
+        occupiedCellsAround++
+    if (getOrNull(y + 1)?.getOrNull(x + 1) == true)
+        occupiedCellsAround++
+
+    return occupiedCellsAround < 4
 }
