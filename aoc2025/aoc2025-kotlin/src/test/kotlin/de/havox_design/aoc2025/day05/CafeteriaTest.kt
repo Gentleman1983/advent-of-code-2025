@@ -10,7 +10,7 @@ class CafeteriaTest {
 
     @ParameterizedTest
     @MethodSource("getDataForTestProcessPart1")
-    fun testProcessPart1(filename: String, expectedResult: Long) =
+    fun testProcessPart1(filename: String, expectedResult: Int) =
         Cafeteria(filename).processPart1().shouldBe(expectedResult)
 
     @ParameterizedTest
@@ -22,7 +22,7 @@ class CafeteriaTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day05/day05part1sample.txt", 3L)
+                Arguments.of("de/havox_design/aoc2025/day05/day05part1sample.txt", 3)
             )
 
         @JvmStatic
