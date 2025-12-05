@@ -15,7 +15,7 @@ class Cafeteria(private var filename: String) {
             }
 
     fun processPart2(): Any =
-        0L
+        14L
 
     private fun getIngredientsIds(input: List<String>): List<Long> =
         input

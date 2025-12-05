@@ -22,13 +22,13 @@ class CafeteriaTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day05/day05part1sample.txt", 3)
+                Arguments.of("de/havox_design/aoc2025/day05/day05sample.txt", 3)
             )
 
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day05/day05part2sample.txt", 0L)
+                Arguments.of("de/havox_design/aoc2025/day05/day05part2sample.txt", 14L)
             )
     }
 }
