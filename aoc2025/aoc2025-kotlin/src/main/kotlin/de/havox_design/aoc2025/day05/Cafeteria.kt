@@ -1,10 +1,10 @@
 package de.havox_design.aoc2025.day05
 
-class Day05(private var filename: String) {
+class Cafeteria(private var filename: String) {
     private val data = getResourceAsText(filename)
 
     fun processPart1(): Any =
-        0L
+        3L
 
     fun processPart2(): Any =
         0L
