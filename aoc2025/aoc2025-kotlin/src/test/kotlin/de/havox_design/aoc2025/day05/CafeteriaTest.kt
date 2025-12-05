@@ -28,7 +28,7 @@ class CafeteriaTest {
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day05/day05part2sample.txt", 14L)
+                Arguments.of("de/havox_design/aoc2025/day05/day05sample.txt", 14L)
             )
     }
 }
