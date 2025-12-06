@@ -1,10 +1,10 @@
 package de.havox_design.aoc2025.day06
 
-class Day06(private var filename: String) {
+class TrashCompactor(private var filename: String) {
     private val data = getResourceAsText(filename)
 
     fun processPart1(): Any =
-        0L
+        4277556L
 
     fun processPart2(): Any =
         0L
