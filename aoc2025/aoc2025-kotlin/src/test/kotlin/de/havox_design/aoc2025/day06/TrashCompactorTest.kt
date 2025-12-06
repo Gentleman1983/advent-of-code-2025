@@ -22,13 +22,13 @@ class TrashCompactorTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day06/day06part1sample.txt", 4277556L)
+                Arguments.of("de/havox_design/aoc2025/day06/day06sample.txt", 4277556L)
             )
 
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day06/day06part2sample.txt", 0L)
+                Arguments.of("de/havox_design/aoc2025/day06/day06sample.txt", 3263827L)
             )
     }
 }
