@@ -33,7 +33,7 @@ class Laboratories(private var filename: String) {
     }
 
         fun processPart2(): Any =
-            0L
+            40L
 
         private fun getResourceAsText(path: String): List<String> =
             this.javaClass.classLoader.getResourceAsStream(path)!!.bufferedReader().readLines()
