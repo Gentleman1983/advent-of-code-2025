@@ -11,30 +11,76 @@ class Laboratories(private var filename: String) {
 
         data
             .forEach { line ->
-            if (line.contains('^')) {
-                val splitters = mutableSetOf<Int>()
+                if (line.contains('^')) {
+                    val splitters = mutableSetOf<Int>()
 
-                for (i in line.indices)
-                    if (line[i] == '^') splitters.add(i)
+                    for (i in line.indices)
+                        if (line[i] == '^') splitters.add(i)
 
-                val collisions = beams.intersect(splitters)
+                    val collisions = beams.intersect(splitters)
 
-                sum += collisions.size
-                beams.removeAll(collisions)
+                    sum += collisions.size
+                    beams.removeAll(collisions)
 
-                for (collision in collisions) {
-                    beams.add(collision - 1)
-                    beams.add(collision + 1)
+                    for (collision in collisions) {
+                        beams.add(collision - 1)
+                        beams.add(collision + 1)
+                    }
                 }
             }
-        }
 
         return sum
     }
 
-        fun processPart2(): Any =
-            40L
+    fun processPart2(): Any {
+        val emitter = data[0]
+            .indexOf('S')
+        val beams = mutableMapOf(emitter to 1L)
 
-        private fun getResourceAsText(path: String): List<String> =
-            this.javaClass.classLoader.getResourceAsStream(path)!!.bufferedReader().readLines()
+        data
+            .forEach { line ->
+                if (line.contains('^')) {
+                    val splitters = mutableSetOf<Int>()
+
+                    for (i in line.indices) {
+                        if (line[i] == '^') {
+                            splitters.add(i)
+                        }
+                    }
+
+                    val collisions = beams
+                        .keys
+                        .intersect(splitters)
+                    val temp = mutableMapOf<Int, Long>()
+
+                    for (collision in collisions) {
+                        val count = beams[collision]
+
+                        beams[collision] = 0
+                        temp[collision] = count ?: 0L
+                    }
+
+                    temp
+                        .forEach { (key, value) ->
+                            val currL = beams[key - 1] ?: 0
+                            val currR = beams[key + 1] ?: 0
+
+                            beams[key - 1] = currL + value
+                            beams[key + 1] = currR + value
+                        }
+                }
+            }
+
+        return beams
+            .values
+            .sum()
     }
+
+    private fun getResourceAsText(path: String): List<String> =
+        this
+            .javaClass
+            .classLoader
+            .getResourceAsStream(path)!!
+            .bufferedReader()
+            .readLines()
+}
