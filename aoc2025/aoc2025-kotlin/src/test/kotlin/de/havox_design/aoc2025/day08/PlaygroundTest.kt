@@ -22,13 +22,13 @@ class PlaygroundTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day08/day08part1sample.txt", 40L)
+                Arguments.of("de/havox_design/aoc2025/day08/day08sample.txt", 40L)
             )
 
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day08/day08part2sample.txt", 0L)
+                Arguments.of("de/havox_design/aoc2025/day08/day08part2sample.txt", 25272L)
             )
     }
 }

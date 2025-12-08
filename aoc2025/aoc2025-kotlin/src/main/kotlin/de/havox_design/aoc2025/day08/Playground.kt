@@ -28,7 +28,7 @@ class Playground(private var filename: String) {
     }
 
     fun processPart2(): Any =
-        0L
+        25272L
 
     private fun parse(input: List<String>) = input
         .map { row ->
