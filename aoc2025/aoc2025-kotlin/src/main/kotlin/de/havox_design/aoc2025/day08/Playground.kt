@@ -27,8 +27,27 @@ class Playground(private var filename: String) {
             }
     }
 
-    fun processPart2(): Any =
-        25272L
+    fun processPart2(): Any {
+        val (lines, circuits) = parse(data)
+        val pairs = lines
+            .zipWithAllUnique()
+            .sortedBy { (a, b) ->
+                a.distanceTo(b)
+            }
+            .iterator()
+        var out = 0L
+
+        while (circuits.size >= 2) {
+            val (a, b) = pairs
+                .next()
+
+            if (circuits.link(a, b)) {
+                out = a.x.toLong() * b.x.toLong()
+            }
+        }
+
+        return out
+    }
 
     private fun parse(input: List<String>) = input
         .map { row ->
