@@ -11,7 +11,7 @@ class PlaygroundTest {
     @ParameterizedTest
     @MethodSource("getDataForTestProcessPart1")
     fun testProcessPart1(filename: String, expectedResult: Long) =
-        Playground(filename).processPart1().shouldBe(expectedResult)
+        Playground(filename).processPart1(10).shouldBe(expectedResult)
 
     @ParameterizedTest
     @MethodSource("getDataForTestProcessPart2")
