@@ -8,7 +8,7 @@ import de.havox_design.aoc2025.day04.PrintingDepartment
 import de.havox_design.aoc2025.day05.Cafeteria
 import de.havox_design.aoc2025.day06.TrashCompactor
 import de.havox_design.aoc2025.day07.Laboratories
-import de.havox_design.aoc2025.day08.Day08
+import de.havox_design.aoc2025.day08.Playground
 import de.havox_design.aoc2025.day09.Day09
 import de.havox_design.aoc2025.day10.Day10
 import de.havox_design.aoc2025.day11.Day11
@@ -100,8 +100,8 @@ class MainClass : AocMainClassHelper {
         day = 8
         day(
             getDayString(day),
-            Day08(getFileName(day))::processPart1,
-            Day08(getFileName(day))::processPart2,
+            Playground(getFileName(day))::processPart1,
+            Playground(getFileName(day))::processPart2,
             daysSelected,
             args
         )
