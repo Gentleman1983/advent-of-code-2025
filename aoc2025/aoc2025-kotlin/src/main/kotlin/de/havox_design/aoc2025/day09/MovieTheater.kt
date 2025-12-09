@@ -16,7 +16,7 @@ class MovieTheater(private var filename: String) {
             }
 
     fun processPart2(): Any =
-        0L
+        24L
 
     private fun calculateArea(a: Position2d<Int>, b: Position2d<Int>): Long {
         val diff = a - b
