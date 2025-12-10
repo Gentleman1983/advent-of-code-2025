@@ -12,7 +12,11 @@ class Factory(private var filename: String) {
             }
 
     fun processPart2(): Any =
-        33L
+        data
+            .sumOf { schematic ->
+                schematic
+                    .findShortestJoltageSequence()
+            }
 
     private fun List<String>.parse() =
         this

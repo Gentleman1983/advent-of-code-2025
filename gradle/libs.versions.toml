@@ -2,11 +2,13 @@
 hamcrest = "3.0"
 junit5 = "6.0.1"
 kotlin-jvm = "2.2.21"
+ojalgo = "56.1.1"
 sonarqube-plugin = "7.2.0.6526"
 
 [libraries]
 hamcrest = { group = "org.hamcrest", name = "hamcrest", version.ref = "hamcrest" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit5" }
+ojalgo = { group = "org.ojalgo", name = "ojalgo", version.ref = "ojalgo" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-jvm" }

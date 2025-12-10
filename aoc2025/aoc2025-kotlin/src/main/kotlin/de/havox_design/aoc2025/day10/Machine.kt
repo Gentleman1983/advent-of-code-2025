@@ -1,5 +1,10 @@
 package de.havox_design.aoc2025.day10
 
+import org.ojalgo.netio.BasicLogger
+import org.ojalgo.optimisation.ExpressionsBasedModel
+import org.ojalgo.optimisation.integer.IntegerSolver
+import org.ojalgo.type.context.NumberContext
+import java.math.BigDecimal
 import java.util.PriorityQueue
 
 data class Machine(
@@ -74,6 +79,56 @@ data class Machine(
                 .toCollection(queue)
         }
         error("Did not find target for $this")
+    }
+
+    fun findShortestJoltageSequence(): BigDecimal {
+        val model = ExpressionsBasedModel()
+
+        model
+            .options
+            .progress(IntegerSolver::class.java)
+        model
+            .options
+            .logger_appender = BasicLogger.NULL
+        model
+            .options
+            .solution = NumberContext
+            .of(joltage.size)
+        model
+            .options
+            .integer()
+
+        val factors = Array(operations.size) {
+            model
+                .addVariable("x_${it}")
+                .integer()
+                .lower(0)
+                .weight(1)
+        }
+
+        joltage
+            .indices
+            .forEach { index ->
+                val expr = model
+                    .addExpression("press_$index")
+                    .level(joltage[index])
+
+                expr
+                    .setLinearFactorsSimple(
+                        operations
+                            .indices
+                            .filter { index in operations[it] }
+                            .map { factors[it] }
+                    )
+            }
+
+        val result = model
+            .minimise()
+
+        return (0..<result.size())
+            .sumOf { i ->
+                result[i.toLong()]
+            }
     }
 }
 
