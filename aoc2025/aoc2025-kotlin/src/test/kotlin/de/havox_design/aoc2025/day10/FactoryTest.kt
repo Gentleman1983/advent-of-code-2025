@@ -10,7 +10,7 @@ class FactoryTest {
 
     @ParameterizedTest
     @MethodSource("getDataForTestProcessPart1")
-    fun testProcessPart1(filename: String, expectedResult: Long) =
+    fun testProcessPart1(filename: String, expectedResult: Int) =
         Factory(filename).processPart1().shouldBe(expectedResult)
 
     @ParameterizedTest
@@ -22,10 +22,10 @@ class FactoryTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample1.txt", 7L)//,
-                //Arguments.of("de/havox_design/aoc2025/day10/day10part1sample2.txt", 2L),
-                //Arguments.of("de/havox_design/aoc2025/day10/day10part1sample3.txt", 3L),
-                //Arguments.of("de/havox_design/aoc2025/day10/day10part1sample4.txt", 2L)
+                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample1.txt", 7),
+                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample2.txt", 2),
+                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample3.txt", 3),
+                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample4.txt", 2)
             )
 
         @JvmStatic

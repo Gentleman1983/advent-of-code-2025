@@ -2,12 +2,25 @@ package de.havox_design.aoc2025.day10
 
 class Factory(private var filename: String) {
     private val data = getResourceAsText(filename)
+        .parse()
 
     fun processPart1(): Any =
-        7L
+        data
+            .sumOf { schematic ->
+                schematic
+                    .findShortestOpeningSequence()
+            }
 
     fun processPart2(): Any =
         0L
+
+    private fun List<String>.parse() =
+        this
+            .map { line ->
+                Machine
+                    .parse(line)
+            }
+            .toList()
 
     private fun getResourceAsText(path: String): List<String> =
         this
