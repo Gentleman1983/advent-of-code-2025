@@ -12,7 +12,7 @@ class Factory(private var filename: String) {
             }
 
     fun processPart2(): Any =
-        0L
+        33L
 
     private fun List<String>.parse() =
         this

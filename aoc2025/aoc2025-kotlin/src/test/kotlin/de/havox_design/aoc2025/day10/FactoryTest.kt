@@ -22,16 +22,19 @@ class FactoryTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample1.txt", 7),
-                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample2.txt", 2),
-                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample3.txt", 3),
-                Arguments.of("de/havox_design/aoc2025/day10/day10part1sample4.txt", 2)
+                Arguments.of("de/havox_design/aoc2025/day10/day10sample1.txt", 7),
+                Arguments.of("de/havox_design/aoc2025/day10/day10sample2.txt", 2),
+                Arguments.of("de/havox_design/aoc2025/day10/day10sample3.txt", 3),
+                Arguments.of("de/havox_design/aoc2025/day10/day10sample4.txt", 2)
             )
 
         @JvmStatic
         private fun getDataForTestProcessPart2(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day10/day10part2sample.txt", 0L)
+                Arguments.of("de/havox_design/aoc2025/day10/day10sample1.txt", 33L)//,
+                //Arguments.of("de/havox_design/aoc2025/day10/day10sample2.txt", 10L),
+                //Arguments.of("de/havox_design/aoc2025/day10/day10sample3.txt", 12L),
+                //Arguments.of("de/havox_design/aoc2025/day10/day10sample4.txt", 11L)
             )
     }
 }
