@@ -10,7 +10,7 @@ class ReactorTest {
 
     @ParameterizedTest
     @MethodSource("getDataForTestProcessPart1")
-    fun testProcessPart1(filename: String, expectedResult: Long) =
+    fun testProcessPart1(filename: String, expectedResult: Int) =
         Reactor(filename).processPart1().shouldBe(expectedResult)
 
     @ParameterizedTest
@@ -22,7 +22,7 @@ class ReactorTest {
         @JvmStatic
         private fun getDataForTestProcessPart1(): Stream<Arguments> =
             Stream.of(
-                Arguments.of("de/havox_design/aoc2025/day11/day11part1sample.txt", 5L)
+                Arguments.of("de/havox_design/aoc2025/day11/day11part1sample.txt", 5)
             )
 
         @JvmStatic
