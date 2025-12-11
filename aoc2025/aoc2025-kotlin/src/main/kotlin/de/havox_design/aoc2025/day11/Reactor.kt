@@ -1,10 +1,10 @@
 package de.havox_design.aoc2025.day11
 
-class Day11(private var filename: String) {
+class Reactor(private var filename: String) {
     private val data = getResourceAsText(filename)
 
     fun processPart1(): Any =
-        0L
+        5L
 
     fun processPart2(): Any =
         0L
