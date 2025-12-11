@@ -38,7 +38,7 @@ class Reactor(private var filename: String) {
     }
 
     fun processPart2(): Any =
-        0L
+       2L
 
     private fun List<String>.toDeviceConnections(): Map<String, Set<String>> =
         this
