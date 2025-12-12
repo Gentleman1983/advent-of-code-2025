@@ -27,20 +27,7 @@ class AoC20xxMainTest {
                 Arguments.of(arrayOf("day09")),
                 Arguments.of(arrayOf("day10")),
                 Arguments.of(arrayOf("day11")),
-                Arguments.of(arrayOf("day12")),
-                Arguments.of(arrayOf("day13")),
-                Arguments.of(arrayOf("day14")),
-                Arguments.of(arrayOf("day15")),
-                Arguments.of(arrayOf("day16")),
-                Arguments.of(arrayOf("day17")),
-                Arguments.of(arrayOf("day18")),
-                Arguments.of(arrayOf("day19")),
-                Arguments.of(arrayOf("day20")),
-                Arguments.of(arrayOf("day21")),
-                Arguments.of(arrayOf("day22")),
-                Arguments.of(arrayOf("day23")),
-                Arguments.of(arrayOf("day24")),
-                Arguments.of(arrayOf("day25"))
+                Arguments.of(arrayOf("day12"))
             )
     }
 }

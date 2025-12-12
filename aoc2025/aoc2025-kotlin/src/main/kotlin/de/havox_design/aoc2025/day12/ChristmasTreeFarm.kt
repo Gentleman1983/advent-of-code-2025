@@ -13,7 +13,7 @@ class ChristmasTreeFarm(private var filename: String) {
             }
 
     fun processPart2(): Any =
-        0L
+        "Merry X-Mas"
 
     private fun List<String>.parse(): Pair<List<Shape>, List<Region>> {
         val shapes = mutableListOf<Shape>()

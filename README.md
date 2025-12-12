@@ -33,23 +33,10 @@ To run all solutions, simply run `./gradlew run`. If you want to run the solutio
 | 9       | ⭐ ![Kotlin](img/kotlin.png) | ⭐ ![Kotlin](img/kotlin.png) |
 | 10      | ⭐ ![Kotlin](img/kotlin.png) | ⭐ ![Kotlin](img/kotlin.png) |
 | 11      | ⭐ ![Kotlin](img/kotlin.png) | ⭐ ![Kotlin](img/kotlin.png) |
-| 12      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 13      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 14      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 15      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 16      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 17      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 18      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 19      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 20      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 21      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 22      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 23      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 24      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| 25      | ❌ ![Kotlin](img/kotlin.png) | ❌ ![Kotlin](img/kotlin.png) |
-| **SUM** | **11 ⭐**                    | **11 ⭐**                    |
+| 12      | ⭐ ![Kotlin](img/kotlin.png) | ⭐ ![Kotlin](img/kotlin.png) |
+| **SUM** | **12 ⭐**                    | **12 ⭐**                    |
 
-Total: 22 ⭐
+Total: 24 ⭐
 
 ## Solution image
-N/A
+![AoC2025](img/aoc2025.png)

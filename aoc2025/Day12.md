@@ -111,3 +111,26 @@ So, in this example, **`2`** regions can fit all of their listed presents.
 
 Consider the regions beneath each tree and the presents the Elves would like to fit into each of them. **How many of the 
 regions can fit all of the presents listed?**
+
+# Part Two
+
+The Elves thank you profusely for the help and start rearranging the oddly-shaped presents. As you look up, you notice
+that a lot more Elves have arrived here at the Christmas tree farm.
+
+In fact, many of these new arrivals look **familiar**: they're the Elves you helped while decorating the North Pole 
+base. Right on [schedule](https://adventofcode.com/2025/day/1), each group seems to have brought a **star** to put atop 
+one of the Christmas trees!
+
+Before any of them can find a ladder, a particularly large Christmas tree suddenly flashes brightly when a large 
+**star** magically appears above it! As your eyes readjust, you think you notice a portly man with a white beard 
+disappear into the crowd.
+
+You go look for a ladder; only **23 stars** to go.
+
+You have enough stars to **Finish Decorating the North Pole**.
+
+You help the Elves decorate the Christmas trees with all **24 stars**! Now, the Elves will have plenty of time to 
+prepare for Christmas, and you get a well-deserved break.
+
+Congratulations! You've finished every puzzle in Advent of Code 2025! I hope you had as much fun solving them as I had 
+making them for you.
