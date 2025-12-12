@@ -12,7 +12,7 @@ import de.havox_design.aoc2025.day08.Playground
 import de.havox_design.aoc2025.day09.MovieTheater
 import de.havox_design.aoc2025.day10.Factory
 import de.havox_design.aoc2025.day11.Reactor
-import de.havox_design.aoc2025.day12.Day12
+import de.havox_design.aoc2025.day12.ChristmasTreeFarm
 import de.havox_design.aoc2025.day13.Day13
 import de.havox_design.aoc2025.day14.Day14
 import de.havox_design.aoc2025.day15.Day15
@@ -136,8 +136,8 @@ class MainClass : AocMainClassHelper {
         day = 12
         day(
             getDayString(day),
-            Day12(getFileName(day))::processPart1,
-            Day12(getFileName(day))::processPart2,
+            ChristmasTreeFarm(getFileName(day))::processPart1,
+            ChristmasTreeFarm(getFileName(day))::processPart2,
             daysSelected,
             args
         )

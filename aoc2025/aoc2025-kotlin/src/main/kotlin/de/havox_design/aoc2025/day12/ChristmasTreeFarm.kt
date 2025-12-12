@@ -1,10 +1,10 @@
 package de.havox_design.aoc2025.day12
 
-class Day12(private var filename: String) {
+class ChristmasTreeFarm(private var filename: String) {
     private val data = getResourceAsText(filename)
 
     fun processPart1(): Any =
-        0L
+        2L
 
     fun processPart2(): Any =
         0L
