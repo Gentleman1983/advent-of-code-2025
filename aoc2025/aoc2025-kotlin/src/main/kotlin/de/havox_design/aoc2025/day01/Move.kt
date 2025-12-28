@@ -1,8 +1,9 @@
 package de.havox_design.aoc2025.day01
 
+import de.havox_design.aoc.utils.kotlin.model.directions.LeftRightDirection
 import kotlin.math.*
 
-data class Move(val direction: Direction, val distance: Int) {
+data class Move(val direction: LeftRightDirection, val distance: Int) {
     fun process(start: Int): Pair<Int, Int> {
         val target = (start + calculateChange()) % 100
         val visitingZero = calculateDistance(start)
@@ -26,8 +27,8 @@ data class Move(val direction: Direction, val distance: Int) {
 
     companion object {
         fun parse(string: String): Move {
-            val direction = Direction
-                .parse(string)
+            val direction = LeftRightDirection
+                .from(string)
             val distance = string
                 .substring(1)
                 .toInt()

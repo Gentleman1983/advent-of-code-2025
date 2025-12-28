@@ -1,5 +1,7 @@
 package de.havox_design.aoc2025.day01
 
+import de.havox_design.aoc.utils.kotlin.model.directions.LeftRightDirection
+
 class SecretEntrance(private var filename: String) {
     private val data = getResourceAsText(filename)
         .map { row -> Move.parse(row) }
@@ -26,8 +28,8 @@ class SecretEntrance(private var filename: String) {
                 val hitsZero = (
                         currentValue != 0 &&
                                 (newValue == 0 ||
-                                        move.direction == Direction.L && newValue > currentValue ||
-                                        move.direction == Direction.R && newValue < currentValue)
+                                        move.direction == LeftRightDirection.LEFT && newValue > currentValue ||
+                                        move.direction == LeftRightDirection.RIGHT && newValue < currentValue)
                         )
 
                 newValue to oldZeros + move.distance / 100 + if (hitsZero) 1 else 0
