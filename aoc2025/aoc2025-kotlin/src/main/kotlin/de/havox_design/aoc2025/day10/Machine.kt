@@ -7,7 +7,6 @@ import org.ojalgo.optimisation.ExpressionsBasedModel
 import org.ojalgo.optimisation.integer.IntegerSolver
 import org.ojalgo.type.context.NumberContext
 import java.math.BigDecimal
-import java.util.PriorityQueue
 
 data class Machine(
     val switches: Int, val joltage: List<Int>, val bitOperations: List<Int>, val operations: List<List<Int>>
