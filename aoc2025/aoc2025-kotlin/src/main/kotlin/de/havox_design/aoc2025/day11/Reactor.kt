@@ -1,6 +1,6 @@
 package de.havox_design.aoc2025.day11
 
-import de.havox_design.aoc2025.day04.filterNotEmpty
+import de.havox_design.aoc.utils.kotlin.model.collections.filterNotEmpty
 import java.util.LinkedList
 
 class Reactor(private var filename: String) {

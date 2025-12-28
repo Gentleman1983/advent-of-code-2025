@@ -1,5 +1,7 @@
 package de.havox_design.aoc2025.day04
 
+import de.havox_design.aoc.utils.kotlin.model.collections.filterNotEmpty
+
 class PrintingDepartment(private var filename: String) {
     private val data = getResourceAsText(filename)
         .toGrid()
@@ -58,13 +60,11 @@ private fun InputStrings.toGrid(): Grid =
     this
         .filterNotEmpty()
         .map { row ->
-            row.mapTo(mutableListOf()) {
-                it == '@'
-            }
+            row
+                .mapTo(mutableListOf()) {
+                    it == '@'
+                }
         }
-
-fun InputStrings.filterNotEmpty(): InputStrings =
-    filter(String::isNotEmpty)
 
 private fun Grid.isCellAccessible(x: Int, y: Int): Boolean {
     var occupiedCellsAround = 0
