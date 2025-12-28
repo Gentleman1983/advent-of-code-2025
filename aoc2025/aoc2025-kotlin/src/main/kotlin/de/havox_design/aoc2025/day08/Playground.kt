@@ -1,8 +1,7 @@
 package de.havox_design.aoc2025.day08
 
 import de.havox_design.aoc.utils.kotlin.model.positions.Position3d
-import kotlin.math.pow
-import kotlin.math.sqrt
+import de.havox_design.aoc.utils.kotlin.model.positions.distanceTo
 
 class Playground(private var filename: String) {
     private val data = getResourceAsText(filename)
@@ -63,14 +62,6 @@ class Playground(private var filename: String) {
         .let { points ->
             points to points.map { hashSetOf(it) }.toMutableList()
         }
-
-    private fun Position3d<Int>.distanceTo(point: Position3d<Int>): Double {
-        return sqrt(
-            (point.x.toDouble() - x.toDouble()).pow(2) +
-                    (point.y.toDouble() - y.toDouble()).pow(2) +
-                    (point.z.toDouble() - z.toDouble()).pow(2)
-        )
-    }
 
     private fun MutableList<HashSet<Position3d<Int>>>.link(a: Position3d<Int>, b: Position3d<Int>): Boolean {
         if (any { a in it && b in it }) {
