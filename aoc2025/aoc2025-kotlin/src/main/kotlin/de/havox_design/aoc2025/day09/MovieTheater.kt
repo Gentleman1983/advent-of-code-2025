@@ -1,5 +1,6 @@
 package de.havox_design.aoc2025.day09
 
+import de.havox_design.aoc.utils.kotlin.helpers.combinations
 import de.havox_design.aoc.utils.kotlin.helpers.pairwise
 import de.havox_design.aoc.utils.kotlin.model.positions.Position2d
 import de.havox_design.aoc.utils.kotlin.model.positions.minus
@@ -135,7 +136,3 @@ class MovieTheater(private var filename: String) {
         private const val ROW_DELIMITER = ","
     }
 }
-
-private fun <A> Iterable<A>.combinations(): List<Pair<A, A>> =
-    this
-        .pairwise(this)
