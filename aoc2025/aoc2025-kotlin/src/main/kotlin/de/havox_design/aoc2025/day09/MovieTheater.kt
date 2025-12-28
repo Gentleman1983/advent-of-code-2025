@@ -1,5 +1,6 @@
 package de.havox_design.aoc2025.day09
 
+import de.havox_design.aoc.utils.kotlin.helpers.pairwise
 import de.havox_design.aoc.utils.kotlin.model.positions.Position2d
 import de.havox_design.aoc.utils.kotlin.model.positions.minus
 import kotlin.math.absoluteValue
@@ -138,12 +139,3 @@ class MovieTheater(private var filename: String) {
 private fun <A> Iterable<A>.combinations(): List<Pair<A, A>> =
     this
         .pairwise(this)
-
-private fun <A, B> Iterable<A>.pairwise(other: Iterable<B>): List<Pair<A, B>> =
-    flatMapIndexed { i, a ->
-        other
-            .drop(i + 1)
-            .map { b ->
-                a to b
-            }
-    }

@@ -1,6 +1,6 @@
 package de.havox_design.aoc2025.day04
 
-import de.havox_design.aoc.utils.kotlin.model.collections.filterNotEmpty
+import de.havox_design.aoc.utils.kotlin.helpers.filterNotEmpty
 
 class PrintingDepartment(private var filename: String) {
     private val data = getResourceAsText(filename)
