@@ -1,5 +1,7 @@
 package de.havox_design.aoc2025.day10
 
+import de.havox_design.aoc.utils.kotlin.helpers.priorityQueueOf
+import de.havox_design.aoc.utils.kotlin.helpers.toInt
 import org.ojalgo.netio.BasicLogger
 import org.ojalgo.optimisation.ExpressionsBasedModel
 import org.ojalgo.optimisation.integer.IntegerSolver
@@ -136,17 +138,3 @@ private fun List<Int>.toBitMask() =
     fold(0) { acc, value ->
         acc or (1 shl value)
     }
-
-private fun Boolean.toInt() = when {
-    this -> 1
-    else -> 0
-}
-
-private fun <T : Any> priorityQueueOf(comparator: Comparator<T>, vararg args: T): PriorityQueue<T> {
-    val queue = PriorityQueue<T>(comparator)
-
-    queue
-        .addAll(args)
-
-    return queue
-}
