@@ -8,7 +8,8 @@
          <trust file=".*-sources[.]jar" regex="true"/>
          <trust file=".*[.]module" regex="true"/>
          <trust file=".*[.]pom" regex="true"/>
-         <trust file="^org[.]sonarsource($|([.].*))" regex="true"/>
+         <trust file="^sonar-scanner-($|([.].*))" regex="true"/>
+         <trust file="^sonarqube-gradle-plugin-($|([.].*))" regex="true"/>
       </trusted-artifacts>
       <ignored-keys>
          <ignored-key id="4C731023F5CC322C" reason="Key couldn't be downloaded from any key server"/>
